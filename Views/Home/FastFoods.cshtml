@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model asp.net_task1.Models.FastFoodsViewModel
+<div class="text-center">
+   
+    <h1 style="color:orangered">Fast Foods</h1>
+    @foreach (var item in Model.FastFoods)
+    {
+        <section style="width:20%;margin:2%;display:inline-block">
+            <h5>Name : @item.Name</h5>
+            <h5>Category : @item.Category</h5>
+            <h5>Preparation Time : @item.PreparationTime</h5>
+            <h5>Special Adding : @item.SpecialAdding</h5>
+            <h5>Calories : @item.Calories</h5>
+            <h5>Price : @item.Price</h5>
+        </section>
+    }
+
+</div>

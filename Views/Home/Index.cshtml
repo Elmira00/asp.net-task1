@@ -1,0 +1,46 @@
+﻿@*@{
+    ViewData["Title"] = "Home Page";
+}*@
+@model asp.net_task1.Models.IndexViewModel
+
+<div class="text-center" >
+        <h1 style="color:rebeccapurple">Drinks</h1>
+    @foreach (var item in Model.Drinks)
+    {
+        <section style="width:20%;margin:2%;display:inline-block">
+            <h5>Name : @item.Name</h5>
+            <h5>Category : @item.Category</h5>
+            <h5>Is Alcoholic : @item.IsAlcoholic</h5>
+            <h5>Packaging : @item.Packaging</h5>
+            <h5>Volume : @item.Volume</h5>
+            <h5>Calories : @item.Calories</h5>
+            <h5>Price : @item.Price</h5>
+        </section>
+    }
+    <h1 style="color:firebrick">Hot Meals</h1>
+    @foreach (var item in Model.HotMeals)
+    {
+        <section style="width:20%;margin:2%;display:inline-block">
+            <h5>Name : @item.Name</h5>
+            <h5>Category : @item.Category</h5>
+            <h5>Serving Size : @item.ServingSize</h5>
+            <h5>Is Vegetarian : @item.IsVegetarian</h5>
+            <h5>Spice Level : @item.SpiceLevel</h5>
+            <h5>Calories : @item.Calories</h5>
+            <h5>Price : @item.Price</h5>
+        </section>
+    }
+      <h1 style="color:orangered">Fast Foods</h1>
+    @foreach (var item in Model.FastFoods)
+    {
+        <section style="width:20%;margin:2%;display:inline-block">
+            <h5>Name : @item.Name</h5>
+            <h5>Category : @item.Category</h5>
+            <h5>Preparation Time : @item.PreparationTime</h5>
+            <h5>Special Adding : @item.SpecialAdding</h5>
+            <h5>Calories : @item.Calories</h5>
+            <h5>Price : @item.Price</h5>
+        </section>
+    }
+
+</div>
